@@ -1,7 +1,30 @@
-# DSA Progress – C++
+# Data Structures and Algorithms in C++
 
-This repository contains my daily practice programs
-for learning Data Structures and Algorithms using C++.
+This repository contains implementations of core **Data Structures and Algorithms** using **C++**.
+The goal is to strengthen problem-solving skills and prepare for technical interviews.
 
-I am starting with fundamentals and will add
-more problems and topics regularly.
+
+---
+
+## 📚 Topics Covered
+- Arrays
+- Strings
+- Linked List
+- Stack
+- Queue
+- Recursion
+- Sorting
+- Searching
+
+---
+
+## 🧠 Key Focus
+- Clean and readable C++ code
+- Proper use of STL where applicable
+- Time and Space Complexity analysis
+- Interview-oriented problems
+
+---
+
+## 🎯 Purpose
+This repository is part of my consistent DSA practice for placement and interview preparation.
