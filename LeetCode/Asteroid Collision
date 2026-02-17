@@ -1,0 +1,54 @@
+class Solution {
+public:
+    vector<int> asteroidCollision(vector<int>& arr) {
+        
+        stack<int> st;
+        
+        for(int i = 0; i < arr.size(); i++) {
+            
+            int x = arr[i];
+            
+            if(st.empty()) {
+                st.push(x);
+            }
+            else {
+                
+                // check collision
+                while(!st.empty() && x < 0 && st.top() > 0) {
+                    
+                    if(abs(x) > st.top()) {
+                        st.pop();
+                    }
+                    else if(abs(x) == st.top()) {
+                        st.pop();
+                        x = 0;   // both destroyed
+                        break;
+                    }
+                    else {
+                        x = 0;   // current destroyed
+                        break;
+                    }
+                }
+                
+                if(x != 0) {
+                    st.push(x);
+                }
+            }
+        }
+        
+        vector<int> ans;
+        
+        while(!st.empty()) {
+            ans.push_back(st.top());
+            st.pop();
+        }
+        
+        reverse(ans.begin(), ans.end());
+        
+        return ans;
+    }
+};
+
+
+time complexity->O(n)
+space complexity-> O(n)
