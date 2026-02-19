@@ -1,0 +1,27 @@
+/*Structure of the node of the binary tree is as
+struct Node
+{
+    int data;
+    struct Node* left;
+    struct Node* right;
+};
+*/
+// function should return the sum of all
+// left leaf nodes
+class Solution {
+  public:
+    int leftLeavesSum(Node *root) {
+    if (root == NULL) return 0;
+
+    int sum = 0;
+
+    if (root->left && root->left->left == NULL && root->left->right == NULL) {
+        sum += root->left->data;
+    }
+
+    sum += leftLeavesSum(root->left);
+    sum += leftLeavesSum(root->right);
+
+    return sum;
+    }
+};
